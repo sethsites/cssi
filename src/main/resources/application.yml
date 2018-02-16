@@ -1,0 +1,16 @@
+logging:
+  level:
+    org.hibernate.SQL: INFO
+    org.hibernate.type.descriptor.sql.BasicBinder: INFO
+    com.vaadin.spring.navigator.SpringViewProvider: WARN
+    com.vaadin.spring.server.SpringUIProvider: WARN
+server:
+  session:
+    persistent: false
+liquibase:
+  change-log: classpath:/db/changelog/db.changelog.yml
+spring:
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: none

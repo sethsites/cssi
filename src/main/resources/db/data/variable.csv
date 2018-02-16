@@ -1,0 +1,156 @@
+id,name,indicator_id,type
+1,Military Forces,1,1
+2,Government ParaMilitary Forces,1,1
+3,Non-state ParaMilitary Forces,1,1
+4,Unarmed Combatants,1,1
+5,Non-Military Armed Combatants,1,1
+6,Military Functions,1,3
+7,Attitude Toward US,2,2
+8,Governmentt Effectiveness & Legitimacy,2,1
+9,Centers of Political Power,2,1
+10,Political History,2,3
+11,Type of Government,2,1
+12,International Relations,2,3
+13,Influencial Political Groups,2,2
+14,Political Power Map,2,3
+15,Sustainable economy,3,1
+16,Diverse livelihoods & employment,3,3
+17,Currency,3,3
+18,Tax Burden,3,2
+19,Banking & Finance,3,1
+20,Illicit Markets,3,3
+21,Attractiveness,3,2
+22,Means,4,1
+23,Message,4,2
+24,Audience,4,2
+25,Hospitals,5,1
+26,Clinics,5,1
+27,Medicine,5,1
+28,911 Service,5,1
+29,Research,5,1
+30,Disease,5,1
+31,Public Health,5,1
+32,Effective safeguards,5,2
+33,Training,5,1
+34,Literature,6,2
+35,Schools & College & University,6,1
+36,Curriculum Distribution,6,2
+37,Administration,6,2
+38,Supplies,6,1
+39,Police (LE),7,1
+40,Law,7,1
+41,Right of Way,7,2
+42,Control & Distribution,8,1
+43,Capacity,8,1
+44,Constraints,8,2
+45,Power Plants,8,1
+46,Coal,8,1
+47,Gas,8,1
+48,Transmission Lines,8,1
+49,Substations,8,1
+50,Outages,8,2
+51,Companies,8,3
+52,Control & Distribution,9,1
+53,Capacity,9,1
+54,Constraints,9,2
+55,Treatment Facilities,9,1
+56,Pumps,9,1
+57,Pipes,9,1
+58,Fire Hydrants,9,1
+59,Sources,9,1
+60,Companies,9,3
+61,Agricultural Uses,9,2
+62,Control & Distribution,10,1
+63,Capacity,10,1
+64,Constraints,10,2
+65,Treatment Facilities,10,1
+66,Pumps,10,1
+67,Pipes,10,1
+68,Output Locations,10,1
+69,Sources,10,1
+70,Companies,10,3
+71,Collection Entries,10,2
+72,Control & Distribution,11,1
+73,Capacity,11,1
+74,Constraints,11,2
+75,Incinerators,11,1
+76,Administration,11,2
+77,Recycling,11,1
+78,Vehicles,11,1
+79,Pollution,11,2
+80,Hazardous Materials,11,1
+81,Companies,11,3
+82,Control & Distribution,12,1
+83,Capacity,12,1
+84,Constraints,12,2
+85,Markets,12,1
+86,Farms,12,1
+87,Equipment,12,1
+88,Administration,12,2
+89,Processing,12,3
+90,Import/Export,12,3
+91,Companies,12,3
+92,Demographics,13,1
+93,Linguistics,13,2
+94,Religion,13,2
+95,Control & Distribution,14,1
+96,Capacity,14,1
+97,Constraints,14,2
+98,Type,14,3
+99,Student Transit,14,3
+100,Traffic Density,14,2
+101,Terrain,15,1
+102,Natural Resources,15,1
+103,Climate,15,2
+104,Weather,15,2
+105,Hydrology,15,3
+106,Urban Zoning,16,1
+107,Building Density,16,2
+108,Construction Patterns,16,2
+109,Ports,16,3
+110,Bridge/Tunnel/Canal,16,3
+111,Cultural Perception of Time,17,3
+112,Information Offset,17,3
+113,Key Dates/Time Periods/Events,17,2
+114,Justice,18,2
+115,Ownership,18,3
+116,Health & Wellbeing,19,3
+117,View of Sex,19,2
+118,View of Wealth,20,2
+119,Source of Wealth,20,1
+120,Symbols of Wealth,20,2
+121,History,21,3
+122,Historical Revisionists,21,2
+123,Literacy,21,2
+124,Bargaining,21,2
+125,Education Level Distribution,22,1
+126,Entrepreneurial Spirit,22,2
+127,Violence,23,3
+128,Authority,23,2
+129,Influence,23,2
+130,Theology,24,1
+131,Ontology,24,2
+132,View/Location of Police,25,3
+133,Checkpoints,25,1
+134,Fire/Medical Services,25,3
+135,Building Codes,25,1
+136,Weapons,25,1
+137,Information Management,26,3
+138,Intelligence,26,1
+139,Groups,27,1
+140,Ages,27,1
+141,External Influencers,27,2
+142,Effectiveness,28,1
+143,Empowered stakeholders,28,2
+144,Integrated development planning,28,1
+145,Growth vs Equilibrium,28,3
+146,Urban Aging,28,1
+147,Reliability,29,1
+148,Art,29,3
+149,Music,29,3
+150,Cyber Awareness,29,3
+151,Effectiveness,30,1
+152,Priority,30,2
+153,Fairness,30,2
+154,Reliability,31,1
+155,Growth/Decay,31,2

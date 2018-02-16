@@ -1,0 +1,315 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: ssites
+      changes:
+        - createTable:
+            tableName: continent
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: version
+                  type: int
+                  defaultValue: 1
+              - column:
+                  name: name
+                  type: varchar(255)
+  - changeSet:
+      id: 2
+      author: ssites
+      changes:
+      - loadData:
+          tableName: continent
+          file: db/data/continents.csv
+  - changeSet:
+      id: 3
+      author: ssites
+      changes:
+        - createTable:
+            tableName: country
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: version
+                  type: int
+                  defaultValue: 1
+              - column:
+                  name: name
+                  type: varchar(255)
+              - column:
+                  name: continent_id
+                  type: int
+  - changeSet:
+      id: 4
+      author: ssites
+      changes:
+      - loadData:
+          tableName: country
+          file: db/data/countries.csv
+  - changeSet:
+      id: 5
+      author: ssites
+      changes:
+        - createTable:
+            tableName: city
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: version
+                  type: int
+                  defaultValue: 1
+              - column:
+                  name: name
+                  type: varchar(255)
+              - column:
+                  name: country_id
+                  type: int
+  - changeSet:
+      id: 6
+      author: ssites
+      changes:
+      - loadData:
+          tableName: city
+          file: db/data/cities.csv
+  - changeSet:
+      id: 7
+      author: ssites
+      changes:
+        - createTable:
+            tableName: subsystem
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: version
+                  type: int
+                  defaultValue: 1
+              - column:
+                  name: name
+                  type: varchar(255)
+  - changeSet:
+      id: 8
+      author: ssites
+      changes:
+      - loadData:
+          tableName: subsystem
+          file: db/data/subsystem.csv
+  - changeSet:
+      id: 9
+      author: ssites
+      changes:
+        - createTable:
+            tableName: indicator
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: version
+                  type: int
+                  defaultValue: 1
+              - column:
+                  name: name
+                  type: varchar(255)
+              - column:
+                  name: subsystem_id
+                  type: int
+  - changeSet:
+      id: 10
+      author: ssites
+      changes:
+      - loadData:
+          tableName: indicator
+          file: db/data/indicator.csv
+  - changeSet:
+      id: 11
+      author: ssites
+      changes:
+        - createTable:
+            tableName: variable
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: version
+                  type: int
+                  defaultValue: 1
+              - column:
+                  name: name
+                  type: varchar(255)
+              - column:
+                  name: indicator_id
+                  type: int
+              - column:
+                  name: type
+                  type: int
+  - changeSet:
+      id: 12
+      author: ssites
+      changes:
+      - loadData:
+          tableName: variable
+          file: db/data/variable.csv
+  - changeSet:
+      id: 13
+      author: ssites
+      changes:
+        - createTable:
+            tableName: subvariable
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: version
+                  type: int
+                  defaultValue: 1
+              - column:
+                  name: name
+                  type: varchar(255)
+              - column:
+                  name: variable_id
+                  type: int
+  - changeSet:
+      id: 14
+      author: ssites
+      changes:
+      - loadData:
+          tableName: subvariable
+          file: db/data/subvariable.csv
+  - changeSet:
+      id: 15
+      author: ssites
+      changes:
+        - createTable:
+            tableName: cssiscoring
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: version
+                  type: int
+                  defaultValue: 1
+              - column:
+                  name: score_date
+                  type: date
+              - column:
+                  name: city_id
+                  type: int
+              - column:
+                  name: psyche_capability_score
+                  type: int
+                  defaultValue: 0
+              - column:
+                  name: psyche_will_score
+                  type: int
+                  defaultValue: 0
+              - column:
+                  name: physiology_capability_score
+                  type: int
+                  defaultValue: 0
+              - column:
+                  name: physiology_will_score
+                  type: int
+                  defaultValue: 0
+              - column:
+                  name: anatomy_capability_score
+                  type: int
+                  defaultValue: 0
+              - column:
+                  name: anatomy_will_score
+                  type: int
+                  defaultValue: 0
+              - column:
+                  name: relational_capability_score
+                  type: int
+                  defaultValue: 0
+              - column:
+                  name: relational_will_score
+                  type: int
+                  defaultValue: 0
+  - changeSet:
+      id: 16
+      author: ssites
+      changes:
+      - loadData:
+          tableName: cssiscoring
+          file: db/data/cssiscoring.csv
+  - changeSet:
+      id: 17
+      author: ssites
+      changes:
+        - createTable:
+            tableName: cssiscore
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: version
+                  type: int
+                  defaultValue: 1
+              - column:
+                  name: cssiscoring_id
+                  type: int
+              - column:
+                  name: variable_id
+                  type: int
+              - column:
+                  name: subvariable_id
+                  type: int
+              - column:
+                  name: score
+                  type: int
+  - changeSet:
+      id: 18
+      author: ssites
+      changes:
+      - loadData:
+          tableName: cssiscore
+          file: db/data/cssiscore.csv

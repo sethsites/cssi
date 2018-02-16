@@ -1,0 +1,22 @@
+databaseChangeLog:
+  - changeSet:
+      id: 002-001
+      author: ssites
+      changes:
+      - loadData:
+          tableName: city
+          file: db/data/cities2.csv
+  - changeSet:
+      id: 002-002
+      author: ssites
+      changes:
+      - loadData:
+          tableName: cssiscoring
+          file: db/data/cssiscoring2.csv
+  - changeSet:
+      id: 002-003
+      author: ssites
+      changes:
+      - loadData:
+          tableName: cssiscore
+          file: db/data/cssiscore2.csv

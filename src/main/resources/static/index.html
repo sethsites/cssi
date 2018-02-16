@@ -1,0 +1,116 @@
+<html>
+    <head>
+        <title>CSSI Project</title>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div id="content">
+            <div id="nav">
+                <span class="title">CSSI Project</span>
+                <ul>
+                    <li><a href="#" onclick="showCitiesScatterPlot()">Cities Overview</a></li>
+                    <li><a href="#" onclick="showCitySystemsScatterPlot()">City Systems</a></li>
+                    <li><a href="#" onclick="showCityIndicatorsScatterPlot()">City Indicators</a></li>
+                </ul>
+            </div>
+            <div id="tester" style=""></div>
+        </div>
+        <div id="footer">sethsites.com 2018</div>
+        <script>
+
+
+            showCitiesScatterPlot();
+
+            function showCitiesScatterPlot() {
+                var layout = {
+                  xaxis: {
+                    range: [0, 400]
+                  },
+                  yaxis: {
+                    range: [0, 400]
+                  },
+                  legend: {
+                      "orientation": "h"
+                  },
+                  title:'Cities Overview Scatter Plot'
+                };
+
+                var jqxhr = $.getJSON( "/citiesScatterPlot", function() {
+                  console.log( "success" );
+                })
+                  .done(function(data) {
+                      Plotly.newPlot('tester', data, layout);
+                      console.log( "second success" );
+                  })
+                  .fail(function() {
+                    console.log( "error" );
+                  })
+                  .always(function() {
+                    console.log( "complete" );
+                  });
+            }
+
+            function showCitySystemsScatterPlot() {
+                var layout = {
+                  xaxis: {
+                    range: [0, 200]
+                  },
+                  yaxis: {
+                    range: [0, 200]
+                  },
+                  legend: {
+                      "orientation": "h"
+                  },
+                  title:'City Systems Scatter Plot'
+                };
+
+                var jqxhr = $.getJSON( "/cityScatterPlot", function() {
+                  console.log( "success" );
+                })
+                  .done(function(data) {
+                      Plotly.newPlot('tester', data, layout);
+                      console.log( "second success" );
+                  })
+                  .fail(function() {
+                    console.log( "error" );
+                  })
+                  .always(function() {
+                    console.log( "complete" );
+                  });
+            }
+
+            function showCityIndicatorsScatterPlot() {
+                var layout = {
+                  xaxis: {
+                    range: [0, 60]
+                  },
+                  yaxis: {
+                    range: [0, 60]
+                  },
+                  legend: {
+                      "orientation": "h"
+                  },
+                  title:'City Indicators Scatter Plot'
+                };
+
+                var jqxhr = $.getJSON( "/cityIndicatorsScatterPlot", function() {
+                  console.log( "success" );
+                })
+                  .done(function(data) {
+                      Plotly.newPlot('tester', data, layout);
+                      console.log( "second success" );
+                  })
+                  .fail(function() {
+                    console.log( "error" );
+                  })
+                  .always(function() {
+                    console.log( "complete" );
+                  });
+            }
+
+
+        </script>
+    </body>
+</html>
