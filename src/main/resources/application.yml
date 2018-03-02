@@ -5,12 +5,13 @@ logging:
     com.vaadin.spring.navigator.SpringViewProvider: WARN
     com.vaadin.spring.server.SpringUIProvider: WARN
 server:
-  session:
-    persistent: false
-liquibase:
-  change-log: classpath:/db/changelog/db.changelog.yml
+  servlet:
+    session:
+      persistent: false
 spring:
   jpa:
     show-sql: true
     hibernate:
       ddl-auto: none
+  liquibase:
+    change-log: classpath:/db/changelog/db.changelog.yml
