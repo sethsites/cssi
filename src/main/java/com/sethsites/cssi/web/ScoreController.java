@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 /**
  * User: Seth Sites
@@ -37,10 +38,11 @@ public class ScoreController {
                 scoringDTOS.add(CssiScoringDTO.toDTO(scoring));
             }
         } else {
-            CssiScoring cssiScoring = cssiScoringRepository.findOne(id);
-            if (cssiScoring != null)
-                cssiScoring.recalculateScores();
-            scoringDTOS.add(CssiScoringDTO.toDTO(cssiScoring));
+            Optional<CssiScoring> cssiScoring = cssiScoringRepository.findById(id);
+            if (cssiScoring.isPresent()) {
+                cssiScoring.get().recalculateScores();
+                scoringDTOS.add(CssiScoringDTO.toDTO(cssiScoring.get()));
+            }
         }
         return scoringDTOS;
     }
